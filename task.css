@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.container {
+    background-color: red;
+    width: 100%;
+  }
+.container1{
+  display: flex;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 3px;
+}
+ 
+  .type {
+    font-size: 14px;
+    padding-top: 20px;
+  }
+ 
+  .hot {
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: grey;
+  }
+  
+  input {
+    width: 400px;
+    padding: 6px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .pic{
+      margin-left: 23%;
+      margin-top: 15px;
+      padding: 15px;
+      width: 20%;
+    
+  }
+  
+  #load {
+    display: block !important;
+    margin: 10px auto !important;
+    padding: 2px 28px;
+  }
+ 
+ 
+  
+  
+  
+
+  
