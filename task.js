@@ -5,7 +5,7 @@ function loadNews(e) {
     const xhr = new XMLHttpRequest();
     const text = document.querySelector('.new').value;
 
-    xhr.open('GET', `https://newsapi.org/v2/everything?q=${text}&from=2019-12-28&sortBy=popularity&apiKey=5c49070b63254918ba7af41d02afc424`, true)
+    xhr.open('GET', `https://newsapi.org/v2/everything?q=${text}&from=2020-02-28&sortBy=popularity&apiKey=5c49070b63254918ba7af41d02afc424`, true)
 
     xhr.onload = function (e) {
         if (this.status === 200) {
