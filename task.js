@@ -1,14 +1,15 @@
-document.querySelector('#load').addEventListener('click', loadNews);
-document.addEventListener('click', loadNews);
+document.getElementById('#load').addEventListener('click', loadNews);
+
 function loadNews(e) {
 
-    const xhr = new XMLHttpRequest();
+    const https = new XMLHttpRequest();
     const text = document.querySelector('.new').value;
+                    
+    
+    https.open("GET", `https://newsapi.org/v2/everything?q=${text}&from=2021-03-14&to=2021-03-15&sortBy=popularity&apiKey=db38a6a574384b64accec67cdcaaa36f`, true);
 
-    xhr.open('GET', `https://newsapi.org/v2/everything?q=${text}&from=2020-02-28&sortBy=popularity&apiKey=5c49070b63254918ba7af41d02afc424`, true)
-
-    xhr.onload = function (e) {
-        if (this.status === 200) {
+    https.onload = function (e) {
+        if (this.status === 200) { 
             const response = JSON.parse(this.response);
 
             // print the content
@@ -31,8 +32,10 @@ function loadNews(e) {
             document.querySelector('#result').innerHTML = output;
 
         }
-
-    }
-    xhr.send();
+  
+    };
+    https.send();
+    
     e.preventDefault();
-}dr
+  
+};
